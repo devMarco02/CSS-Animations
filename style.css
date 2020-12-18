@@ -1,0 +1,41 @@
+body{
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+*/
+
+img{
+  /*================transform=====================*/
+  transform: translateX(200px);  /*move x axis*/
+  transform: translate(200px, 150px); /*move x and y axis*/
+  transform: scale(.5,.5); /*shrink to .5*/
+  transform: rotateZ(45deg); /*can rotate x,y or z */
+}
+
+
+/*========================transition========================*/
+.circle{
+  width: 100px;  /*create circle*/
+  padding: 50px 0;
+  border-radius: 50px; 
+  line-height: 0;
+  margin: 60px auto;                     /*========first state=======*/
+  background: pink;
+  color: white;
+  cursor: pointer;
+
+  /*transition: 1s;*/ /*affect all*/
+  transition: background 1s, transform 3s; 
+  transition: background 1s 1.5s ease-in;  /*1st for duration,2nd for delay,3rd for speed timing,iteration,direction*/
+}
+
+.circle:hover{
+  background: salmon;                   /*========second state======*/
+  transform: rotate(360deg);
+}
